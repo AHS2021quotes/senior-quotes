@@ -14,7 +14,7 @@ function showInfo(data, tabletop) {
   const template = document.querySelector('template')
   
 
-  alert('Successfully processed!')
+  //alert('Successfully processed!')
   console.log(data);
     //insert code here
     for (var i = 0; i < data.length; i++){
