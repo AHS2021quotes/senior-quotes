@@ -20,7 +20,7 @@
      //insert code here
      for (var i = 0; i < data.length; i++){
          const content = template.content.cloneNode(true)
-         content.querySelector('h3').innerText = data[i]["Email Address"]
+         content.querySelector('h3').innerText = data[i]["Name"]
          if (data[i].Image != ""){ 
          content.querySelector('img').src = data[i].Image
          }
