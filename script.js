@@ -21,6 +21,7 @@
      for (var i = 0; i < data.length; i++){
          const content = template.content.cloneNode(true)
          content.querySelector('h3').innerText = data[i]["Name"]
+         content.querySelector("div").id = data[i]["Name"].split(" ").join("")
          if (data[i].Image != ""){ 
          content.querySelector('img').src = data[i].Image
          }
