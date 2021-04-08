@@ -47,14 +47,14 @@
         height: 150px;
       }
 
-      #header {
+      header {
         
         color: maroon;
         font-size: 20px;
       }
 
       a {
-        color: maroon;
+        color: goldenrod;
       }
 
       @media (max-width:800px){
@@ -94,19 +94,19 @@
 
   <body>
 
-    <div id="header" style="background-color:goldenrod;">
+    <header style="background-color:white;">
       <h1>Ashley High School Class of '21 Senior Quotes</h1>
-      <p>Pardon our dust, there's still much to come.</p>
-      <div>
+      <div style = "background-color: maroon;">
+      <br>
       <a href = "https://docs.google.com/forms/d/e/1FAIpQLSdPFcTxTistVE-BrFrlQn5239cehp8kIMEPDDbWVD0xooJhvQ/viewform?usp=sf_link" target = "_blank">Seniors, click here to add/edit your quote!</a>
-      </div>
       <br>
     </div>
+    </header>
 
     <div id="search" style = "background-color: maroon; color: goldenrod;">
       <br>
       <form id = "searchForStudent" onsubmit="return false">
-        <label>Search</label>
+        <label>Search:</label>
         <input list = "names">
         <datalist id = "names">
 
