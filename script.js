@@ -30,6 +30,7 @@
          var quoteID = data[i]["Name"].split(" ").join("")
          content.querySelector("div").id = quoteID
 
+         /* This code changed meta data stuff, but it turns out it didn't work how I wanted to
          if (quoteID == divID){
           //alert("NI")
           document.querySelector('#ogurl').setAttribute("content", url);
@@ -41,6 +42,7 @@
           
           
          }
+         */
 
          if (data[i].Image != ""){ 
          content.querySelector('img').src = data[i].Image
