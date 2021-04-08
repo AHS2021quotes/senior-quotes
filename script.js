@@ -25,6 +25,8 @@
    console.log(data);
      //insert code here
      for (var i = 0; i < data.length; i++){
+
+        //adds quotes and stuff to the the css grid
          const content = template.content.cloneNode(true)
          content.querySelector('h3').innerText = data[i]["Name"]
          var quoteID = data[i]["Name"].split(" ").join("")
@@ -43,12 +45,16 @@
           
          }
          */
-
          if (data[i].Image != ""){ 
          content.querySelector('img').src = data[i].Image
          }
          content.querySelector('#quote').innerText = data[i].Quote
          body.querySelector("#quoteGrid").appendChild(content)
+
+         //Adds Name To Search Bar
+         var dataName = document.createElement('option');
+         dataName.value = data[i]["Name"];
+         body.querySelector("#search").querySelector("#names").appendChild(dataName);
      }
  
  }

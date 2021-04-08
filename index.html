@@ -85,6 +85,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
     <script src="script.js"></script>
+    <script src = "goToStudent.js"></script>
 
     
     
@@ -99,6 +100,19 @@
       <a href = "https://docs.google.com/forms/d/e/1FAIpQLSdPFcTxTistVE-BrFrlQn5239cehp8kIMEPDDbWVD0xooJhvQ/viewform?usp=sf_link" target = "_blank">Seniors, click here to add/edit your quote!</a>
       </div>
     </div>
+    <br>
+    <div id="search" style = "background-color: maroon; color: gold;">
+      <form id = "searchForStudent" onsubmit="return false">
+        <label>Search</label>
+        <input list = "names">
+        <datalist id = "names">
+
+        </datalist>
+        <button onclick = "goToStudent()">Submit</button>
+      </form>
+
+    </div>
+
     <div id = "quoteGrid" class = "grid-container">
     </div>
     <template>
