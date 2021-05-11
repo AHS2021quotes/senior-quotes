@@ -1,5 +1,5 @@
   
- var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQKkrxHqlAGPjmWN7mTRzcHdtdgXXbMUr11b_FbiVQ01OiurzEDG20m9ihnHOdOsPsa1_k7qhg7Swm4/pubhtml';
+ var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1GToACVmb0c_wpSH0VTNW5e25t2ur1wrzvarJPewn_zQ/pubhtml';
 
 
  function init() {
