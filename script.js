@@ -48,7 +48,13 @@
          if (data[i].Image != ""){ 
          content.querySelector('img').src = data[i].Image
          }
+         
+         if (data[i].Quote != "") {
          content.querySelector('#quote').innerText = data[i].Quote
+         }
+         else {
+          content.querySelector('#quote').innerText = "Class of 2021"
+         }
          body.querySelector("#quoteGrid").appendChild(content)
 
          //Adds Name To Search Bar
