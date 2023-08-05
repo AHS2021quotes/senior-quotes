@@ -1,50 +1,33 @@
   
- var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1GToACVmb0c_wpSH0VTNW5e25t2ur1wrzvarJPewn_zQ/pubhtml';
-
+const apiEndpoint = "https://script.google.com/macros/s/AKfycbwW9SalCgn90xFMWuI825QkN0JyVpuG_BJYBtf93Y_TTEwYetQFwWE0BBgma-PvCqRV8A/exec?action=get"
 
  function init() {
-   Tabletop.init( {
-     key: publicSpreadsheetUrl,
-     callback: showInfo,
-     simpleSheet: true 
-   } )
+    getAndDisplayData();
+ }
+
+ async function getData() {
+    let response = await fetch(apiEndpoint);
+    let json = await response.json();
+    return json;
+ }
+
+ async function getAndDisplayData() {
+    let json = await getData();
+    showInfo(json);
  }
  
- function showInfo(data, tabletop) {
+ function showInfo(data) {
    const body = document.body
    const template = body.querySelector('template')
 
-
-   var url = window.location.href
-   var partsArr = url.split("#")
-   var divID = "perryThePlatypus"
-   if (partsArr.length = 2){
-     divID = partsArr[1]
-   }
-   //alert('Successfully processed!')
-   console.log(data);
      //insert code here
      for (var i = 0; i < data.length; i++){
-
-        //adds quotes and stuff to the the css grid
+        //adds quotes and info to the the css grid
          const content = template.content.cloneNode(true)
          content.querySelector('h3').innerText = data[i]["Name"]
          var quoteID = data[i]["Name"].split(" ").join("")
          content.querySelector("div").id = quoteID
 
-         /* This code changed meta data stuff, but it turns out it didn't work how I wanted to
-         if (quoteID == divID){
-          //alert("NI")
-          document.querySelector('#ogurl').setAttribute("content", url);
-          document.querySelector('#ogtitle').setAttribute("content", data[i]["Name"]);
-          if (data[i].Image != ""){ 
-          document.querySelector('#ogimage').setAttribute("content", data[i]["Image"]);
-          }
-          document.querySelector('#ogdescription').setAttribute("content", data[i]["Quote"]);
-          
-          
-         }
-         */
          if (data[i].Image != ""){ 
          content.querySelector('img').src = data[i].Image
          }
